@@ -1,7 +1,7 @@
 # Breeze2000
 Breeze2000 is a fork of KDE Breeze decoration that aims to look like Windows 2000 with the gradients while preserving the main look of Breeze.
 
-![Screenshot](https://github.com/alex47/Breeze2000/blob/master/Breeze2000_Screenshot2.png)
+![Screenshot](https://github.com/alex47/Breeze2000/blob/master/Breeze2000_Screenshot3.png)
 
 The following description is mainly copied from [SierraBreeze](https://github.com/ishovkun/SierraBreeze).
 
