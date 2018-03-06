@@ -399,7 +399,7 @@ namespace Breeze
 
         }
 
-        QColor bgColor(255, 255, 255);
+        QColor bgColor(236, 235, 232);
 
         auto c = d->client().data();
         if( isPressed() ) {

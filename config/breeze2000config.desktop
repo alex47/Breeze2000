@@ -1,0 +1,17 @@
+[Desktop Entry]
+# Exec=kcmshell5 breezedecorationconfig
+Exec=kcmshell5 breeze2000config
+Icon=preferences-system-windows
+Type=Service
+X-KDE-ServiceTypes=KCModule
+
+# X-KDE-Library=org.kde.kdecoration2/breezedecoration
+X-KDE-Library=org.kde.kdecoration2/breeze2000
+X-KDE-PluginKeyword=kcmodule
+X-KDE-ParentApp=kcontrol
+X-KDE-Weight=60
+X-KDE-PluginInfo-Name=Breeze2000
+
+Name=Breeze2000
+Comment=Modify the appearance of window decorations
+X-KDE-Keywords=breeze2000,decoration

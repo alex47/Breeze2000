@@ -121,6 +121,9 @@ namespace Breeze
     QColor Decoration::outlineColor() const
     {
 
+        return QColor();
+
+        /*
         auto c( client().data() );
         if( !m_internalSettings->drawTitleBarSeparator() ) return QColor();
         if( m_animation->state() == QPropertyAnimation::Running )
@@ -130,6 +133,7 @@ namespace Breeze
             return color;
         } else if( c->isActive() ) return c->palette().color( QPalette::Highlight );
         else return QColor();
+        */
     }
 
     //________________________________________________________________
@@ -482,27 +486,20 @@ namespace Breeze
         painter->setPen(Qt::NoPen);
 
         // render a linear gradient on title area
-        if( m_internalSettings->drawBackgroundGradient() )
+        if( c->isActive() )
         {
-            if( c->isActive() )
-            {
-                QLinearGradient gradient( 0, 0, titleRect.width(), 0 );
-                gradient.setColorAt(0.1, QColor( 10,  36,  106 ) );
-                gradient.setColorAt(0.9, QColor( 166, 202, 240 ) );
+            QLinearGradient gradient( 0, 0, titleRect.width(), 0 );
+            gradient.setColorAt(0.1, QColor( 10,  36,  106 ) );
+            gradient.setColorAt(0.9, QColor( 166, 202, 240 ) );
 
-                painter->setBrush(gradient);
+            painter->setBrush(gradient);
 
-            } else {
-                QLinearGradient gradient( 0, 0, titleRect.width(), 0 );
-                gradient.setColorAt(0.1, QColor( 128, 128, 128 ) );
-                gradient.setColorAt(0.9, QColor( 192, 192, 192 ) );
-
-                painter->setBrush(gradient);
-
-            }
         } else {
+            QLinearGradient gradient( 0, 0, titleRect.width(), 0 );
+            gradient.setColorAt(0.1, QColor( 128, 128, 128 ) );
+            gradient.setColorAt(0.9, QColor( 192, 192, 192 ) );
 
-            painter->setBrush( titleBarColor() );
+            painter->setBrush(gradient);
 
         }
 
